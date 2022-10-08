@@ -35,7 +35,7 @@ const requestListener = async function (req, res) {
       .forEach((el) => el.remove());
     doc.window.document
       .querySelectorAll("p")
-      .forEach((p) => (p.style.cssText += "font-size:24px; line-height: 1.5;"));
+      .forEach((p) => (p.style.cssText += "font-size:30px; line-height: 1.5;"));
     newHtmlDoc.window.document.body.insertBefore(
       doc.window.document.body,
       null
