@@ -1,0 +1,17 @@
+{
+  "name": "ledevoircron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "start": "node .",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "jsdom": "^20.0.0"
+  }
+}
