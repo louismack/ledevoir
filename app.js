@@ -33,7 +33,8 @@ const requestListener = async function (req, res) {
     //   );
     doc.window.document.querySelector("header").remove();
     doc.window.document.querySelector("footer").remove();
-    doc.window.document.querySelector("video").remove();
+    if (doc.window.document.querySelector("video"))
+      doc.window.document.querySelector("video").remove();
     newHtmlDoc.window.document.body.insertBefore(
       doc.window.document.body,
       null
