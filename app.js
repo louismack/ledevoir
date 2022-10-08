@@ -27,14 +27,12 @@ const requestListener = async function (req, res) {
       "<div style='width: 100vw;'>" + res.data + "</div>",
       "text/html"
     );
-    //   link.parent.parent.parent.insertAdjacentElement(
-    //     "afterend",
-    //     doc.window.document.body
-    //   );
+
     doc.window.document.querySelector("header").remove();
     doc.window.document.querySelector("footer").remove();
-    if (doc.window.document.querySelector("video"))
-      doc.window.document.querySelector("video").remove();
+    doc.window.document
+      .querySelectorAll("script[src^='https://cdn.jwplayer.com/players']")
+      .forEach((el) => el.remove());
     newHtmlDoc.window.document.body.insertBefore(
       doc.window.document.body,
       null
