@@ -38,7 +38,7 @@ const requestListener = async function (req, res) {
       null
     );
   }
-  res.writeHead(200);
+  res.writeHead(200, { "Content-Type": "text/html" });
   res.end(newHtmlDoc.serialize());
 };
 
