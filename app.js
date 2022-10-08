@@ -33,6 +33,9 @@ const requestListener = async function (req, res) {
     doc.window.document
       .querySelectorAll("script[src^='https://cdn.jwplayer.com/players']")
       .forEach((el) => el.remove());
+    document
+      .querySelectorAll("p")
+      .forEach((p) => (p.style.cssText += "font-size:24px"));
     newHtmlDoc.window.document.body.insertBefore(
       doc.window.document.body,
       null
